@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_personal_page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.JS"></script>
+</head>
+<body onload="animateElements()">
+    <div class="content">
+        <h1 class="title">Крутая личная страница</h1>
+        <p class="name"><b>Кот Барсик</b></p>
+        <div class="in-one-line"><img src="images/profile.png" alt="Крутая картинка профиля" class="main-img">
+        <p class="main-text">Привет!😎🐾
+Я — тот самый кот, который знает толк в отдыхе: солнце, море и кокос всегда под лапой. Здесь будет немного ленивого настроения, тёплых мыслей и мурчания без повода🏖️☀️</p></div>
+        <p class="list-title">На страничках ты найдешь</p>
+        <ul>
+            <li class="listEl">Крутые факты обо мне😎</li>
+            <li class="listEl">Мои любимые мемы😹</li>
+            <li class="listEl">Мои любимые цитаты😼</li>
+        </ul>
+        <a href="page2.html" class="next-page">Следующая страница>>>></a>
+    </div>
+    <script>
+        function animateElements() {        
+            setTimeout(() => {
+                document.querySelector('.title').classList.add('fade-in');
+                document.querySelector('.name').classList.add('fade-in');
+                document.querySelector('.main-img').classList.add('fade-in');
+                document.querySelector('.main-text').classList.add('fade-in');
+                document.querySelector('.list-title').classList.add('fade-in');
+                const liElements = document.querySelectorAll('.listEl');
+                liElements.forEach((element) => {
+                    element.classList.add('fade-in');
+                });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
