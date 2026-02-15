@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_personal_page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.JS"></script>
+</head>
+<body onload="animateElements()">
+    <div class="content">
+        <h1 class="title"><b>Крутые факты обо мне</b></h1>
+        <ol>
+            <li class="listEl">Я не ленюсь. Я накапливаю энергию для действительно важных дел. Например, для сна.</li>
+            <li class="listEl">Я не игнорирую. Я просто решаю, достоин ли ты моего внимания.</li>
+            <li class="listEl">Я не падаю. Я всегда приземляюсь так, как и планировал. Даже если это выглядело странно.</li>
+            <li class="listEl">Я не прошу еду. Я напоминаю, кто в этом доме отвечает за расписание.</li>
+            <li class="listEl">Я не позирую. Я просто существую — а это уже контент.</li>
+        </ol>
+        <a href="index.html" class="prev-page">&lt&lt&lt&ltПредыдущая страница</a>
+        <a href="page3.html" class="next-page">Следующая страница>>>></a>
+    </div>
+    <script>
+        function animateElements() {        
+            setTimeout(() => {
+                document.querySelector('.title').classList.add('fade-in');
+                const liElements = document.querySelectorAll('.listEl');
+                liElements.forEach((element) => {
+                    element.classList.add('fade-in');
+                });
+            }, 100);
+        }
+    </script>
+</body>
+</html>

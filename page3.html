@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_personal_page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.JS"></script>
+</head>
+<body onload="animateElements()">
+    <div class="content">
+        <h1 class="title"><b>Мои любимые мемы</b></h1>
+        <div class="in-one-line"><img src="images/Relax.jpeg" alt="Отдыхаем" class="meme-img"><img src="images/Che_vo.jpeg" alt="Смешной котик" class="meme-img"></div>
+        <div class="in-one-line"><img src="images/Dog_plane.png" alt="Собачка улетает" class="meme-img"><img src="images/Hedgehog.jpeg" alt="гуманитаный визг" class="meme-img"></div>
+        <a href="page2.html" class="prev-page">&lt&lt&lt&ltПредыдущая страница</a>
+        <a href="page4.html" class="next-page">Следующая страница>>>></a>
+    </div>
+    <script>
+        function animateElements() {      
+            setTimeout(() => {
+                document.querySelector('.title').classList.add('fade-in');
+                const imgs = document.querySelectorAll('.meme-img');
+                imgs.forEach((element) => {
+                    element.classList.add('fade-in');
+                });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
